@@ -1,4 +1,4 @@
-{
+
     "AWSTemplateFormatVersion": "2010-09-09",
     "Description": "Amazon VPC with 2 ublic subnet and 2 Private subnet",
     "Parameters": {
@@ -252,7 +252,7 @@
             "Properties": {
                 "AvailabilityZone": {
                     "Fn::Select": [
-                        "2",
+                        "0",
                         {
                             "Fn::GetAZs": {
                                 "Ref": "AWS::Region"
@@ -284,7 +284,7 @@
             "Properties": {
                 "AvailabilityZone": {
                     "Fn::Select": [
-                        "3",
+                        "1",
                         {
                             "Fn::GetAZs": {
                                 "Ref": "AWS::Region"
